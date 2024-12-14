@@ -3,51 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Year Countdown - Kalpak</title>
+    <meta name="description" content="Portfolio and New Year Countdown by Kalpak Agrawal">
+    <title>Kalpak Agrawal - New Year Countdown</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Header Section -->
     <header>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#countdown">Countdown Timer</a></li>
-                <li><a href="#about">About Me</a></li>
-            </ul>
-        </nav>
+        <h1>Welcome to My Special New Year Countdown</h1>
     </header>
 
-    <main>
-        <!-- Section Container for Side-by-Side -->
-        <div class="section-container">
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- Combined Countdown and Creative Surprise Section -->
+        <section id="combined" class="box">
             <!-- Countdown Section -->
-            <section id="countdown" class="half-section">
-                <h2>New Year Countdown</h2>
-                <div id="timer">
+            <div id="countdown">
+                <h2>🎉 Countdown to 2025 🎉</h2>
+                <h3>Wednesday, Jan 1, 2025</h3>
+                <div id="timer" class="timer-box">
                     <div><span id="days">00</span> Days</div>
                     <div><span id="hours">00</span> Hours</div>
                     <div><span id="minutes">00</span> Minutes</div>
                     <div><span id="seconds">00</span> Seconds</div>
                 </div>
                 <button id="preview-btn">Preview</button>
-                <div id="message" class="message"></div>
-                <p class="creative-text">Be Creative Here<br>Do whatever you like</p>
-            </section>
+            </div>
 
-            <!-- About Yourself Section -->
-            <section id="about" class="half-section">
-                <div class="image-placeholder">A Picture<br>(Maybe Yours)</div>
-                <h2>Tell About Yourself</h2>
-                <p><strong>Name:</strong> Kalpak Agrawal</p>
-                <p><strong>About:</strong> A 2nd-year student at IIT Kanpur.</p>
-                <p><strong>Skills:</strong> HTML, CSS, JavaScript, Fusion 360, Mechanical Design</p>
-            </section>
-        </div>
+            <!-- Creative Surprise Section -->
+            <div id="creative">
+                <h2>✨ Start the New Year with a Surprise! ✨</h2>
+                <p>Click the button below for something exciting:</p>
+                <button id="surprise-btn">Reveal Your Surprise!</button>
+                <div id="surprise-message"></div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="box">
+            <div class="image-container">
+                <!-- Add your picture -->
+                <img src="C:\Users\Kalpak\Downloads\GDG_Winter_Submission\WhatsApp Image 2024-12-08 at 18.35.11_b10fae37.jpg" alt="Kalpak Agrawal's Picture" />
+            </div>
+            <h2>🎨 About Me & My Achievements</h2>
+            <div class="portfolio-area">
+                <p><strong>Name:</strong>Kalpak Agrawal</p>
+                <p><strong>About me:</strong>I am a second-year B.Tech student in Materials Science and Engineering at IIT Kanpur, originally from Chandigarh. Passionate about technology-driven projects, I aim to enhance my skills through innovative and impactful work.</p>
+                <p><strong>Skills:</strong>C, C++, HTML, CSS, JavaScript, Git/GitHub, Product Management, fundamental finance</p>
+            </div>
+        </section>
+
     </main>
 
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Kalpak Agrawal. All rights reserved.</p>
+        <p>&copy; 2024 Kalpak Agrawal. Designed with creativity and precision.</p>
     </footer>
 
+    <!-- JavaScript Link -->
     <script src="script.js"></script>
 </body>
 </html>

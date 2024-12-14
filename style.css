@@ -1,71 +1,160 @@
-/* General Styling */
-body {
-    font-family: Arial, sans-serif;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
     color: #333;
-    background: linear-gradient(to right, #ffafbd, #ffc3a0);
-}
-
-header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
-}
-
-.nav-links {
-    list-style: none;
-    padding: 0;
+    line-height: 1.6;
+    margin: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-.nav-links li {
-    margin: 0 15px;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.section {
-    padding: 2rem;
+/* Header */
+header {
+    background-color: #007bff;
+    color: #fff;
     text-align: center;
+    padding: 20px 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-#timer {
+/* Container for Two Boxes */
+.container {
     display: flex;
     justify-content: center;
     gap: 20px;
-    font-size: 2rem;
+    padding: 20px;
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+/* Countdown and Portfolio Boxes */
+.box {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 45%; /* Each box takes 45% of the width */
+    text-align: center;
+    min-width: 300px; /* Ensures boxes look good on small screens */
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.timer-box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #17a2b8;
+}
+
+.timer-box div {
+    background: #e9f7fa;
+    border-radius: 5px;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Preview Button Styling */
+#preview-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#preview-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Portfolio Section */
+.image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.image-container img {
+    width: 150px; /* Circular image size */
+    height: 150px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures proper aspect ratio */
+    border: 5px solid #007bff; /* Add a border around the image */
+}
+
+.portfolio-area {
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Creative Section */
+.creative-area button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.creative-area button:hover {
+    background-color: #218838;
+}
+
+#surprise-message {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #e83e8c;
     font-weight: bold;
 }
 
+/* Footer */
 footer {
+    margin-top: auto;
+    background-color: #333;
+    color: #fff;
     text-align: center;
-    padding: 1rem;
-    background: #333;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    padding: 10px 20px;
+    font-size: 0.9rem;
 }
 
-/* Media Queries */
+/* Responsive Design */
 @media (max-width: 768px) {
-    #timer {
+    .container {
         flex-direction: column;
+        gap: 15px;
     }
 
-    .nav-links {
-        flex-direction: column;
+    .box {
+        width: 100%; /* Full width for smaller screens */
     }
+}
 
-    .nav-links li {
-        margin: 10px 0;
-    }
+/* Adjust spacing between the Creative Section and Preview Button */
+#creative {
+    margin-top: 30px; /* Adds space between the Countdown and Creative sections */
+    padding-top: 20px; /* Adds internal space for better separation */
+    border-top: 2px solid #ddd; /* Optional: Adds a visual separator line */
+}
+
+/* Adds spacing between text and the 'Reveal Your Surprise!' button */
+#surprise-btn {
+    margin-top: 15px;
 }
