@@ -52,34 +52,74 @@ h2 {
 
 .timer-box {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-around; /* Equal spacing between timer boxes */
+    flex-wrap: wrap; /* Ensure boxes wrap on smaller screens */
+    gap: 20px; /* Uniform spacing */
     font-size: 1.5rem;
     margin-top: 20px;
     font-weight: bold;
     color: #17a2b8;
+    width: 100%; /* Ensure timer fits within its parent container */
 }
 
 .timer-box div {
-    background: #e9f7fa;
-    border-radius: 5px;
-    padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: #e9f7fa; /* Soft background color */
+    border-radius: 10px; /* Smooth rounded corners */
+    padding: 15px 20px; /* Comfortable padding */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center; /* Center-align text and numbers */
+    flex: 1 1 120px; /* Flexible sizing, ensures even spacing */
+    max-width: 150px; /* Limit width to maintain uniformity */
+    display: flex; /* Enables flexbox for individual boxes */
+    flex-direction: column; /* Stacks the number and label vertically */
+    align-items: center; /* Centers content horizontally */
+    justify-content: center; /* Centers content vertically */
+    transition: transform 0.2s; /* Animation on hover */
+}
+
+.timer-box div:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    background: #dff9fb; /* Lighter shade on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+    .timer-box {
+        gap: 15px; /* Reduce gaps for smaller screens */
+    }
+
+    .timer-box div {
+        padding: 10px 15px; /* Compact padding */
+        font-size: 1.2rem; /* Adjust font size */
+    }
 }
 
 /* Preview Button Styling */
+/* Updated Preview Button Styling */
 #preview-btn {
     margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 15px 30px; /* Add comfortable padding */
+    background: linear-gradient(135deg, #4facfe, #00f2fe); /* Gradient background */
+    color: #fff; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1.2rem; /* Slightly larger font */
+    font-weight: bold; /* Emphasize text */
+    cursor: pointer; /* Add pointer cursor */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add depth with shadow */
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s; /* Smooth hover effects */
 }
 
 #preview-btn:hover {
-    background-color: #0056b3;
+    transform: scale(1.1); /* Slight zoom-in effect on hover */
+    background: linear-gradient(135deg, #00d2ff, #3a7bd5); /* Change gradient on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
+#preview-btn:active {
+    transform: scale(0.95); /* Slight press-in effect when clicked */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow for active state */
 }
 
 /* Portfolio Section */
@@ -157,4 +197,30 @@ footer {
 /* Adds spacing between text and the 'Reveal Your Surprise!' button */
 #surprise-btn {
     margin-top: 15px;
+}
+
+/* Updated "Reveal Your Surprise!" Button Styling */
+#surprise-btn {
+    margin-top: 15px;
+    padding: 15px 30px; /* Add comfortable padding */
+    background: linear-gradient(135deg, #ff7eb3, #ff758c); /* Gradient background */
+    color: #fff; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1.2rem; /* Slightly larger font */
+    font-weight: bold; /* Emphasize text */
+    cursor: pointer; /* Add pointer cursor */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add depth with shadow */
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s; /* Smooth hover effects */
+}
+
+#surprise-btn:hover {
+    transform: scale(1.1); /* Slight zoom-in effect on hover */
+    background: linear-gradient(135deg, #ff9aa8, #ff6b6b); /* Change gradient on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
+#surprise-btn:active {
+    transform: scale(0.95); /* Slight press-in effect when clicked */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow for active state */
 }
